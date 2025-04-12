@@ -1,0 +1,31 @@
+<div class="container">
+    <!-- First Row: Form -->
+    <div class="form-container">
+        <h1 style="text-align: center; color: #009999; font-size: 2rem; margin: 10px 0;">Start Adding Trip</h1>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="startingPoint">Starting Point:</label>
+                <input type="text" id="startingPoint" class="form-control" placeholder="Enter starting point"
+                    [(ngModel)]="startingPoint" name="startingPoint">
+            </div>
+            <div class="form-group">
+                <label for="endingPoint">Ending Point:</label>
+                <input type="text" id="endingPoint" class="form-control" placeholder="Enter ending point"
+                    [(ngModel)]="endingPoint" name="endingPoint">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <button (click)="visualizeTrip()" [disabled]="tripDetails.length == 0" class="btn btn-primary custom-btn">Visualize</button>
+        <button (click)="clearTrip()" class="btn btn-primary custom-btn-dng">Clear</button>
+    </div>
+
+    <!-- Second Row: Another Component -->
+    <div class="graphics-container">
+        <h1 style="text-align: center; color: #009999; font-size: 2rem; margin: 10px 0;">Trip Lines Graph</h1>
+        <p style="text-align: center; margin: 5px 0;">Click the graph nodes to see expanded view of the trip</p>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <!-- <echarts [options]="tripOptions" class="chart-container"></echarts> -->
+            <div id="chart-container" style="height: 600px; width: 100%;"></div>
+        </div>
+    </div>
+</div>
