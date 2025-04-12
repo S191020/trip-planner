@@ -4,3 +4,4 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ![Project Landing Page](<Project Landing Page.png>)
 ![Trip Visualizar Example](<Trip Visualizar Example.png>)
+![Trip Visualizar Example 2](<Trip Visualizar Example 2.png>)
